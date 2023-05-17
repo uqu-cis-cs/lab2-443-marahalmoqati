@@ -48,18 +48,12 @@ public class Car{
      *      return this.InstanceVariableName;
      * }
      */
-    public void moveCarOut()
-    {
-    flag=false;
-    }
-    public void moveCarIn()
-    {
-    flag=true;
-    }
+
     public String getModel()
     {
     return model;}
-
+    public boolean getFlag() {
+      return flag;}
     /************ Part 4 **************/
     /**
      * Define all setter methods below
@@ -70,8 +64,6 @@ public class Car{
      *
      */
     public void setModel (String m){model=m;}
- public boolean getFlag() {
- return flag;}
  public void setFlag(boolean flag) {this.flag= flag;
  }
 
@@ -82,7 +74,13 @@ public class Car{
      * moveCarIn() to set the inOutGarage flag to true;
      *
      */
-
-
+    public void moveCarOut()
+    {
+    flag=false;
+    }
+    public void moveCarIn()
+    {
+    flag=true;
+    }
 
 }

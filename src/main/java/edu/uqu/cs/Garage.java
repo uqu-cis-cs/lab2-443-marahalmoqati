@@ -22,9 +22,7 @@ public class Garage{
      *
      */
 
-    private Car[] allcars;
-    public Garage (){
-   allcars=new Car[3];}
+    private Car[] allcars= new car[3];
     /************ Part 2 **************/
     /**
      * Decalre a static/class variable named countCars
@@ -48,27 +46,11 @@ public class Garage{
      *     }
      *}
      */
-    public void addCar (String model){
-    boolean found=false;
-    for (int i =0 ; i< countCars; i++)
-    {if
-    (allcars[i].getModel() .equals (model) )
-    {
-    found=true;
-    allcars[i].moveCarIn();
-    }
-}
-    if( !found)
-    {
-    if (countCars<allcars.length){Car c= new Car();
-        c.setModel (model) ;
-        allcars[countCars]=c;
-        allcars[countCars].moveCarIn();
-        countCar++;}
-        else
-    {System.out.println("Full garage");
-    }}}
-
+    public allcars (){
+    	   for(int i=0; i<allcars.length; i++){
+                allcars[i]= new car();
+            }
+        }
     /************ Part 4 **************/
     /**
      * Define addCar(String parameter) that adds a new car (by model) to the garage 
@@ -82,7 +64,26 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-    
+    public addCar (String model){
+        boolean found=false;
+        for (int i =0 ; i< countCars; i++)
+        {if
+        (cars[i].getModel().equals (model) )
+        {
+        found=true;
+        cars[i].moveCarIn();
+        }
+    }
+        if( !found)
+        {
+        if (countCars<allcars.length){Car c= new Car();
+            c.setModel (model) ;
+            allcars[countCars]=c;
+            allcars[countCars].moveCarIn();
+            countCar++;}
+            else
+        {System.out.println("Full garage");
+        }}}
     
 
     /************ Part 5 **************/
@@ -133,7 +134,7 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-    public void listCars(){
+    public void listCars(String m){
         System.out.println("All cars in the Garage are :");
         for(int i =0; i<countCars;i++)
         {
