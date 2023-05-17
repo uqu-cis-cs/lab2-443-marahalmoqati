@@ -21,6 +21,8 @@ public class Car{
      * private dataType name;
      *
      */
+    private String model;
+    private boolean flag;
 
     /************ Part 2 **************/
     /**
@@ -33,7 +35,10 @@ public class Car{
      *      //body
      * }
      */
-
+    public Car(){
+      flag=false;
+      model="";
+     }
     /************ Part 3 **************/
     /**
      * Define all getter methods below
@@ -44,7 +49,11 @@ public class Car{
      * }
      */
 
-
+    public String getModel()
+    {
+    return model;}
+    public boolean getFlag() {
+      return flag;}
     /************ Part 4 **************/
     /**
      * Define all setter methods below
@@ -54,7 +63,9 @@ public class Car{
      * }
      *
      */
-
+    public void setModel (String m){model=m;}
+ public void setFlag(boolean flag) {this.flag= flag;
+ }
 
     /************ Part 5 **************/
     /**
@@ -63,7 +74,13 @@ public class Car{
      * moveCarIn() to set the inOutGarage flag to true;
      *
      */
-
-
+    public void moveCarOut()
+    {
+    flag=false;
+    }
+    public void moveCarIn()
+    {
+    flag=true;
+    }
 
 }
